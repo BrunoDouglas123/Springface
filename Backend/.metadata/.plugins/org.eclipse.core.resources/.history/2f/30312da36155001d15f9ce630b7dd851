@@ -1,0 +1,66 @@
+package Teste.com.teste.DTO;
+
+import javax.persistence.Column;
+
+import Teste.com.teste.Model.Usuario;
+
+public class EpisodioDTO {
+	
+	private Long id;
+	private String nome;
+	private int temporada;
+	private int classficacao;
+	
+	private UsuarioDTO usuario;
+	
+	public EpisodioDTO() {
+	}
+
+	public EpisodioDTO(Long id, String nome, int temporada, int classficacao, UsuarioDTO usuario) {
+		this.id = id;
+		this.nome = nome;
+		this.temporada = temporada;
+		this.classficacao = classficacao;
+		this.usuario = usuario;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getTemporada() {
+		return temporada;
+	}
+
+	public void setTemporada(int temporada) {
+		this.temporada = temporada;
+	}
+
+	public int getClassficacao() {
+		return classficacao;
+	}
+
+	public void setClassficacao(int classficacao) {
+		this.classficacao = classficacao;
+	}
+
+	public UsuarioDTO getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(UsuarioDTO usuario) {
+		this.usuario = usuario;
+	}
+}

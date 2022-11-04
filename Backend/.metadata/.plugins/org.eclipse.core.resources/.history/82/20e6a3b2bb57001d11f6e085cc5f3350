@@ -1,0 +1,43 @@
+package Teste.com.teste.DTO;
+
+import Teste.com.teste.Model.Temporada;
+
+public class TemporadaDTO {
+	
+	private Long id;
+	private int numero;
+	private EpisodioDTO episodio;
+	
+	public TemporadaDTO() {		
+	}
+
+	public TemporadaDTO(Temporada entity) {
+		this.id = entity.getId();
+		this.numero = entity.getNumero();
+		this.episodio = new EpisodioDTO(entity.getEpisodio());
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public EpisodioDTO getEpisodio() {
+		return episodio;
+	}
+
+	public void setEpisodio(EpisodioDTO episodio) {
+		this.episodio = episodio;
+	}
+}
